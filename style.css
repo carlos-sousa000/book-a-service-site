@@ -3,7 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
-  margin: 0 30px 0 30px;
+  margin: 0 40px 0 40px;
 }
 p,
 h1,
@@ -12,48 +12,57 @@ h3 {
   margin: 0;
 }
 img {
-  width: 100%;
+  width: 90%;
   display: block;
   border-radius: 4px;
 }
 .cima {
   display: flex;
   justify-content: center;
+  /* lembrar de usar essa coisas aqui: */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .cima a {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  margin: 0 10px 0 10px;
+
+  padding: 20px;
 }
 .introducao {
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
   justify-items: center;
+
+  /* alinhar melhor */
+  align-items: center;
   font-size: 2rem;
   gap: 30px;
+  padding: 40px;
 }
 
 .introducao h1 {
-  text-align: right;
+  /* primeira linha para organizar */
+  grid-row: 1;
   grid-column: 1;
 }
 
 .introducao h2 {
   font-size: 2rem;
   grid-column: 1;
+  /* segunda linha para organizar */
+  grid-row: 2;
 }
 
-.introducao lugar {
-  justify-content: end;
+.introducao .lugar {
   grid-column: 2;
+  /* ocupa até a 3 parte da linha */
+  grid-row: 1 / span 3;
 }
 
-.introducao logo {
-}
 .btn-agendamento {
   font-size: 1.5rem;
   background-color: purple;
@@ -62,7 +71,13 @@ img {
   border-radius: 4px;
   padding: 10px 20px;
   grid-column: 1;
-  justify-self: center;
+  grid-row: 2;
+  place-self: center;
+
+  /* terceira linha para organizar */
+  grid-row: 3;
+
+  margin-top: 20px;
 }
 
 .btn-agendamento:hover {
@@ -70,8 +85,8 @@ img {
 }
 
 /* @keyframes aaaa {
-}
-.animation {
-  animation-name: aaaa;
-  animation-iteration-count: infinite;
-} */
+  }
+  .animation {
+    animation-name: aaaa;
+    animation-iteration-count: infinite;
+  } */
