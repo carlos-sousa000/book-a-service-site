@@ -22,6 +22,9 @@ header {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  /* lembrar de usar essa coisas aqui: */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 header a {
